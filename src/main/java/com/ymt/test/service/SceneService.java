@@ -43,6 +43,12 @@ public class SceneService {
 		return "编辑成功";
 	}
 	
+	//根据Id查询场景信息
+	@Transactional
+	public SceneModel getSceneById(Integer sceneId){
+		return sceneDao.getScenenById(sceneId);
+	}
+	
 	
 
 }

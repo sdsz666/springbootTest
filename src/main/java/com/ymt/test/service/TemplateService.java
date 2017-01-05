@@ -37,4 +37,23 @@ public class TemplateService {
 		templateDao.saveTemplate(templateModel);
 		return "编辑成功";
 	}
+	
+	
+	@Transactional
+	public TemplateModel getTemplateById(Integer templateId){
+		return templateDao.getTemplateById(templateId);
+	}
+	
+	@Transactional
+	public String editTemplateDetailById(TemplateModel templateModel){
+		TemplateModel temp=templateDao.getTemplateById(templateModel.getTemplateId());
+		temp.setUserId(templateModel.getUserId());
+		temp.setTemplateDetail(templateModel.getTemplateDetail());
+		templateDao.saveTemplate(temp);
+		return "仅保存模版信息成功";
+	}
+	
+	
+	
+	
 }

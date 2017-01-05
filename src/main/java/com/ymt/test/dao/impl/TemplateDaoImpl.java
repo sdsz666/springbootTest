@@ -31,6 +31,10 @@ public class TemplateDaoImpl implements TemplateDao{
 		return templateInterface.findAll(pageable);
 	}
 
+	public TemplateModel getTemplateById(Integer templateId) {
+		return templateInterface.findOne(templateId);
+	}
+
 
 
 

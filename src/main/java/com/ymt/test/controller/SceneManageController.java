@@ -33,7 +33,11 @@ public class SceneManageController {
 	public String editScene(@RequestBody SceneModel sceneModel){
 		sceneService.editScene(sceneModel);
 		return "编辑成功";
-		
+	}
+	
+	@RequestMapping(value="/getSceneById",method={RequestMethod.GET})
+	public SceneModel getSceneById(@RequestParam Integer sceneId){
+		return sceneService.getSceneById(sceneId);
 	}
 
 }

@@ -32,5 +32,9 @@ public class SceneDaoImpl implements SceneDao{
 		return sceneInterface.findAll(pageable);
 	}
 
+	public SceneModel getScenenById(Integer sceneId) {
+		return sceneInterface.findOne(sceneId);
+	}
+
 
 }

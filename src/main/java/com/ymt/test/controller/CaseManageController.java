@@ -2,7 +2,6 @@ package com.ymt.test.controller;
 
 import javax.annotation.Resource;
 
-import org.aspectj.weaver.ast.And;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

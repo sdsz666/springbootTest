@@ -79,6 +79,10 @@ $(function() {
 			var htmlStr = '';
 			//数据在content节点下面
 			$.each(data.content, function(i,item){
+				var jsonStr = item.templateDetail;
+				$('#curUserId').append('<pre id="result"></pre>');
+				$('#result').html(JSON.stringify(JSON.parse(jsonStr), null, 2));
+				
 				htmlStr += '<tr><td><a href="/edittemplate?tid='+item.templateId+'">编辑</a></td><td>'+
 							item.userId+
 							'</td><td>'+

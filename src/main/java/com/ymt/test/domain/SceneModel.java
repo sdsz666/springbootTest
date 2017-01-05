@@ -1,6 +1,7 @@
 package com.ymt.test.domain;
 
 import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -20,8 +21,6 @@ public class SceneModel {
 	private boolean bDeleted;
 	private Integer sceneLevel;
 	private String mark;
-	
-	
 	public Integer getSceneId() {
 		return sceneId;
 	}
@@ -88,6 +87,7 @@ public class SceneModel {
 	public void setMark(String mark) {
 		this.mark = mark;
 	}
+	
 	
 
 }

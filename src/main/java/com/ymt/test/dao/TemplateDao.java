@@ -9,4 +9,6 @@ public interface TemplateDao {
 	
 	public Page getTemplateList(Integer page,Integer size,String sort);
 	
+	public TemplateModel getTemplateById(Integer templateId);
+	
 }
