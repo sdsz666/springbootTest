@@ -1,0 +1,148 @@
+
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+	
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous" />
+	
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+	
+	<script src="/js/main.js"></script>
+
+</head>
+<div>
+	<label>当前登录用户:</label><label id="curUserId"></label>
+	<br />
+</div>
+
+<div>
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist" id="myTabs">
+    <li role="presentation"  class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab" id="caseMge">用例管理</a></li>
+	<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab" id="sceneMge">场景管理</a></li>
+    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab" id="templateMge">模板管理</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+<div class="tab-content"  >
+
+	 <!-- 用例管理 -->
+  <div role="tabpanel" class="tab-pane fade in active" id="home">
+  <br />
+  	 <!-- <button id="caseAdd" class="btn btn-primary" onclick="window.open('/addcase')">添加</button>-->
+  	<a id="caseAdd" class="btn btn-primary" href="/addcase" target="_blank" role="button">添加</a>&emsp;
+  	
+  	<button id="caseRefresh" class="btn btn-primary">刷新</button>
+  	<br />
+  	<br />
+  	<table id="case_table"  class="table table-bordered">
+  		<thead>
+  			  <tr>
+  			  <th>操作</th>
+			  <th>用户名</th>
+			  <th>用例Id</th>
+			  <th>用例描述</th>
+			  <th>模块描述</th>
+			  <th>模板Id</th>
+			  <th>模板名称</th>
+			  <th>场景Id</th>
+			  <th>场景描述</th>
+			  <th>自定义输入</th>
+			  <th>校验描述</th>
+			  <th>自定义输出检查</th>
+			  <th>检查类型</th>
+			  
+   			  
+  			</tr>
+  		</thead>
+  		<tbody>
+  		</tbody>
+  	</table>
+  
+  
+  </div>
+ 
+  <!-- 场景管理 -->
+  <div role="tabpanel" class="tab-pane fade" id="profile">
+  	<br />
+  		<a id="sceneAdd" class="btn btn-primary" href="/addscene" target="_blank" role="button">添加</a>&emsp;
+  		<button id="sceneRefresh" class="btn btn-primary">刷新</button>
+  	<br />
+	<br />
+    <table id="scene_table"  class="table table-bordered">
+  		<thead>
+  			  <tr>
+  			  <th>操作</th>
+			  <th>用户名</th>
+			  <th>场景Id</th>
+			  <th>场景描述</th>
+			  <th>场景Level</th>
+			  <th>场景Host</th>
+			  <th>场景API</th>
+			  <th>模块描述</th>
+			  <th>模板Id</th>
+			  <th>备注信息</th>
+  			</tr>
+  		</thead>
+  		<tbody>
+  		</tbody>
+  	</table>
+  
+  
+  </div>
+  
+   <!-- 模板管理 -->
+  <div role="tabpanel" class="tab-pane fade" id="messages">
+  <br />
+  	<a id="templateAdd" class="btn btn-primary" href="/addtemplate" target="_blank" role="button">添加</a>&emsp;
+  	<button id="templateRefresh" class="btn btn-primary">刷新</button>
+  	<br />
+  	<br />
+    <table id="template_table"  class="table table-bordered">
+  		<thead>
+  			  <tr>
+  			  <th>操作</th>
+			  <th>用户名</th>
+			  <th>模板Id</th>
+			  <th>模板名称</th>
+			  <th>模板内容信息</th>
+			  <th>备注信息</th>
+			  <th>AfterToDo</th>
+			  <th>BeforeToDo</th>
+			  <th>Input2SqlMap</th>
+			  <th>Output2SqlMap</th>
+			  <th>Sql2MongoMap</th>
+			  <th>Output2MongoMap</th>
+   			  
+  			</tr>
+  		</thead>
+  		<tbody>
+  		</tbody>
+  	</table>
+  </div>
+  
+  
+</div>
+
+</div>
+
+
+<!--这里是弹出层效果 -->
+<div id="racePop" class="raceShow" style="overflow: auto; background-color:#f1f1f1;border:solid 1px #ccc;position:absolute;display:none;width:300px;height:450px;padding:5px;font-size:12px;">
+<pre></pre>
+
+<dd style="float:right"><a href="javascript:;" onclick="$('#racePop').hide();">X</a></dd>
+	<br />
+
+
+</div>
+	
+
+
+</html>
+
