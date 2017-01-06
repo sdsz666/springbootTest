@@ -23,9 +23,9 @@ public class CaseManageController {
 		return caseService.saveCase(caseModel);
 	}
 	
-	@RequestMapping(value="/getCaseByCaseId",method={RequestMethod.GET})
-	public CaseModel getCaseByCaseId(@RequestParam Integer caseId){
-		return caseService.getCaseByCaseId(caseId);
+	@RequestMapping(value="/getCaseById",method={RequestMethod.GET})
+	public CaseModel getCaseById(@RequestParam Integer caseId){
+		return caseService.getCaseById(caseId);
 	}
 	
 	@RequestMapping(value="/getCaseList",method={RequestMethod.GET})

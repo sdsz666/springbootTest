@@ -9,16 +9,7 @@ function qs2obj() {
 	return obj
 }
 
-	function getCookie(name)
-		{
-		var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
-		if(arr=document.cookie.match(reg))
-		return unescape(arr[2]);
-		else
-		return null;
-		}
 
-		
 		
 $(function() {
 	var qs = qs2obj();
@@ -26,7 +17,7 @@ $(function() {
 	console.log(qs.cid);
 	
 	//get请求 获取case信息  放到对应位置
-	$.get('/caseManage/getCaseByCaseId?caseId='+qs.cid,function(data){
+	$.get('/caseManage/getCaseById?caseId='+qs.cid,function(data){
 		
 		$('#userId').val(data.userId);
 		$('#caseId').val(data.caseId);

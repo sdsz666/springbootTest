@@ -79,17 +79,13 @@ $(function() {
 			var htmlStr = '';
 			//数据在content节点下面
 			$.each(data.content, function(i,item){
-				var jsonStr = item.templateDetail;
-				$('#curUserId').append('<pre id="result"></pre>');
-				$('#result').html(JSON.stringify(JSON.parse(jsonStr), null, 2));
-				
 				htmlStr += '<tr><td><a href="/edittemplate?tid='+item.templateId+'">编辑</a></td><td>'+
 							item.userId+
 							'</td><td>'+
 							item.templateId+
 							'</td><td>'+
 							item.templateName+
-							'<td><a href="/editjson?tid='+item.templateId+'" target="_blank">单击查看</a></td><td>'+
+							'<td><a data-ref="detail" href="/editjson?tid='+item.templateId+'" target="_blank">单击查看</a></td><td>'+
 							item.mark+
 							'</td><td>'+
 							item.afterToDo+
@@ -158,7 +154,9 @@ $(function() {
 		
 	//默认tab
 	$('#myTabs > li').eq(localStorage.currentTab).children('a').click();
-	
+	$(document).on('click', '[data-ref=detail]', function(ev) {
+		localStorage.shouldGet = String(1);
+	})
 
 	 
 })

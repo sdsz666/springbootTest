@@ -43,7 +43,7 @@ public class  CaseDaoImpl  implements CaseDao{
 	}
 
 	@Transactional
-	public CaseModel getCaseByCaseId(Integer caseId) {
+	public CaseModel getCaseById(Integer caseId) {
 		String sql="select * from case_model where case_id=?";
 		RowMapper<CaseModel> rowMapper=new BeanPropertyRowMapper<CaseModel>(CaseModel.class);
 		return jdbcTemplate.queryForObject(sql, rowMapper,caseId);

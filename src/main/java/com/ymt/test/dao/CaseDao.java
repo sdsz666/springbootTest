@@ -20,7 +20,7 @@ public interface CaseDao{
 	 */
 	public Page getCaseList(Integer page,Integer size,String sort);
 	
-	public CaseModel getCaseByCaseId(Integer caseId);
+	public CaseModel getCaseById(Integer caseId);
 	
 	public List<CaseModel> getCaseListByUserId();
 	

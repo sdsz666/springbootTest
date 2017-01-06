@@ -27,8 +27,8 @@ public class CaseService {
 	}
 	
 	@Transactional
-	public CaseModel getCaseByCaseId(Integer caseId){
-		return caseDao.getCaseByCaseId(caseId);
+	public CaseModel getCaseById(Integer caseId){
+		return caseDao.getCaseById(caseId);
 	}
 	
 	@Transactional

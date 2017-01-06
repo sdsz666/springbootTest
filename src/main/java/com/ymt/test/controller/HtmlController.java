@@ -11,15 +11,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class HtmlController {
 	
 	
-	//get 参数直接在URL中
-    @RequestMapping("/hello/{name}")
-    public String hello(@PathVariable("name") String name, Model model) {
-        model.addAttribute("name", name);
-        return "hello";
-    }
-    
-    
     //get 参数在？
+	
+	
     //测试用例编辑界面
     @RequestMapping("/editcase")
     public String editcase(@RequestParam("cid") String cid, Model model) {
